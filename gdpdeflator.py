@@ -19,7 +19,7 @@ print("Calculated GDP Deflator for each year.")
 gdp_deflator_2000 = gdp_data.loc[years == 2000, 'GDP_Deflator'].values[0]
 print(f"GDP Deflator for year 2000: {gdp_deflator_2000:.2f}")
 
-# Recalculate Real GDP at constant 2000 prices using the correct formula
+# Recalculate Real GDP at constant 2000 prices
 gdp_data['Real_GDP_2000_Prices'] = nominal_gdp * (gdp_deflator_2000 / gdp_data['GDP_Deflator'])
 print("Recalculated Real GDP at constant 2000 prices.")
 
